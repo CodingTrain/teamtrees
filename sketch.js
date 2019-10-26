@@ -7,11 +7,14 @@ let physics;
 let totalLevels = 8;
 
 let gb;
+let wind;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   physics = new VerletPhysics2D();
-  gb = new GravityBehavior(new Vec2D(0, -0.01));
+  
+  wind = 0;
+  gb = new GravityBehavior(new Vec2D(wind, -0.05));
   physics.addBehavior(gb);
   // physics.setWorldBounds(new Rect(0, 0, width, height));
 
@@ -72,6 +75,19 @@ function draw() {
   //   last.y = mouseY;
   //   last.unlock();
   // }
+  
+  // Randomly Create wind
+  if (random() < 0.01){					// optionally add "&& wind == 0" to only create wind when the previous wind disappeared
+	  wind = random(-1, 1) * 35
+  }
+  
+  // Decrease Wind
+  if (wind != 0){
+	wind *= 0.98
+	if ((wind > 0 && wind < 0.5) || (wind < 0 && wind > -9.5)){wind = 0}
+	gb.setForce(new Vec2D(wind, -0.05))
+	console.log(wind);
+  }
 
   for (let i = 0; i < tree.length; i++) {
     tree[i].show();
