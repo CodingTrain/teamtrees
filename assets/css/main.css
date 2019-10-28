@@ -1,0 +1,41 @@
+body {
+  background: #2F7F47;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.button {
+  text-transform: none;
+}
+
+.container {
+  background: white;
+  padding: 3rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.img-title {
+  width: 100%;
+}
+
+.ul-unstyled {
+  list-style: none;
+  margin: 0px;
+}
+
+.bar {
+  border-top: 1px solid #bbb;
+  padding: 1rem 0rem;
+  width: 100%;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}

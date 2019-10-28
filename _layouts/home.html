@@ -1,0 +1,41 @@
+---
+layout: base
+---
+
+<div class="row">
+  <div class="six columns">
+    <img class="img-title" src="{{ '/assets/images/CodingTrain.png' | relative_url }}" alt="Coding Train Logo">
+  </div>
+  <div class="six columns">
+    <img class="img-title" src="{{ '/assets/images/TeamTrees.svg' | relative_url }}" alt="Team Trees Logo">
+  </div>
+</div>
+<div>
+  {{ content }}
+</div>
+<div>
+  <h2>Sketches</h2>
+
+  <ul class="ul-unstyled">
+    {% assign sketches = page.sketches %}
+    {% for sketch in sketches %}
+      <li>
+        <div class="row bar">
+          <div class="eight columns">
+            <h3>{{sketch.name}}</h3>
+            by {{sketch.creator}}
+            {% if sketch.description %}
+            <br>
+            {{sketch.description}}
+            {% endif %}
+          </div>
+          <div class="four columns mt-1">
+            <a class="button u-pull-right" href="Code/{{ sketch.url | relative_url | default: '#' }}">Check it out!</a>
+            <a class="button u-pull-right" href="https://github.com/CodingTrain/TeamTrees/tree/master/Code/{{ sketch.url | default: '#' }}">Source Code</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="bar"></div>
+</div>
