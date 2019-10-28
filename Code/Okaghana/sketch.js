@@ -23,11 +23,14 @@ function setup(){
     physics.addParticle(b);
     tree.push(new Branch(a, b, 0));
 
+	// Loop for every Level the Tree has
     for (let n = 0; n < totalLevels; n++) {
+		// Loop through every element in tree
     	for (let i = tree.length - 1; i >= 0; i--) {
+			// Only create Branches if the Tree hasn't previously branched
 			if (!tree[i].finished) {
-				let a = tree[i].branchA();
-				let b = tree[i].branchB();
+				let a = tree[i].createBranch(PI/6);
+				let b = tree[i].createBranch(-PI/4);
 				tree.push(a);
 				tree.push(b);
 			}
@@ -44,14 +47,9 @@ function mousePressed(){
   // gb.scaledForce.y = -50;
 }
 
-let xoff = 0;
 function draw(){
 	background(51);
 	physics.update();
-
-	xoff += 0.01;
-	gb.scaledForce.y = map(noise(xoff + 1000), 0, 1, -0.02, 0.005);
-	gb.scaledForce.x = map(noise(xoff), 0, 1, -0.02, 0.02);
 
     // if (mouseIsPressed) {
     //   let last = tree[tree.length - 1].end;
@@ -64,9 +62,9 @@ function draw(){
 	wind.createWind()	 // Randomly Create wind
 	wind.draw()
 	wind.update()
-
+	
+	// Draw tree
 	for (let i = 0; i < tree.length; i++) {
 		tree[i].show();
 	}
-    //console.log(frameCount);
 }
