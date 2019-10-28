@@ -1,6 +1,6 @@
 # TeamTrees
 
-Site with code from #TeamTrees Live Stream.
+[Site](https://codingtrain.github.io/teamtrees/) with code from #TeamTrees Live Stream.
 
 [Live Stream Link](https://www.youtube.com/watch?v=HhceJ5xxl-4)
 
