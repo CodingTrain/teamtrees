@@ -10,7 +10,7 @@ class Branch {
 		let d = dist(this.end.x, this.end.y, this.begin.x, this.begin.y);
 		
 		// Pull Joint to original position
-		this.hook = new VerletParticle2D(this.end)  												//Creates a copy of the Joint on the same Position as the end of the Branch
+		this.hook = new VerletParticle2D(this.end)  												// Creates a copy of the Joint on the same Position as the end of the Branch
 		this.hook.lock()																			// Locks the Particle
 		let springforce = map(this.level, 0, totalLevels, 0.01, 0.004)
 		this.puller = new VerletSpring2D(this.hook, this.end, 10, springforce)

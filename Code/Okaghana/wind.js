@@ -50,28 +50,43 @@ class Wind {
 	
 	initDraw(){
 		this.markers = []
-		for (let i = 0; i < 5; i++){
-			let x = this.buildupStrength>0 ? random(-100, -10) : random(width+100, width+10)
-			let pos = createVector(x, random(100, height/2))
-			this.markers.push(pos)
+		for (let i = 0; i < 4; i++){
+			let line = new wigglyLine(this.buildupStrength)
+			this.markers.push(line)
 		}
 	}
 	
 	draw(){
 		if (this.buildupDuration != 0){
 			// Draw Lines
-			for (let i = 0; i < 5; i++){
-				let x = this.markers[i].x
-				let y = this.markers[i].y
-				
-				fill(255);
-				line(x, y, x+100, y)
-			}
-			
-			// Move markers
-			for (let i = 0; i < 5; i++){
-				this.markers[i].x += this.buildupStrength * 10
+			for (let i = 0; i < this.markers.length; i++){
+				this.markers[i].draw()
+				this.markers[i].update()
 			}
 		}
+	}
+}
+
+// Wiggly lines
+class wigglyLine{
+	constructor(strength){
+		this.strength = strength
+		
+		let x = strength>0 ? random(-500, -50) : random(width+500, width+50)
+		this.pos = createVector(x, random(100, height-100))
+	}
+
+	draw(){
+		let x = this.pos.x
+		let y = this.pos.y
+		
+		noFill()
+		stroke(255)
+		strokeWeight(1)
+		bezier(x-150, y, x-50, y-100, x+50, y+100, x+150, y)
+	}
+	
+	update(){
+		this.pos.x += this.strength * 10
 	}
 }
