@@ -14,6 +14,7 @@ layout: base
 <div>
   {{ content }}
 </div>
+
 <div>
   <h2>Sketches</h2>
 
@@ -34,6 +35,32 @@ layout: base
             <a class="button u-pull-right" href="code/{{ sketch.url | default: '#' }}">Check it out!</a>
             <a class="button u-pull-right" href="https://github.com/CodingTrain/teamtrees/tree/master/code/{{ sketch.url | default: '#' }}">Source Code</a>
           </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="bar"></div>
+</div>
+
+<div>
+  <h2>Videos</h2>
+
+  <ul class="ul-unstyled">
+    {% assign videos = page.videos %}
+    {% for video in videos %}
+      <li>
+        <div class="row bar">
+
+          <h3>{{video.name}}</h3>
+
+          {% if video.website %}
+            <a href="{{video.website}}">View on thecodingtrain.com</a>
+          {% endif %}
+          
+          <div class="vid-height">
+            <iframe class="vid-frame" src="https://www.youtube.com/embed/{{video.video_id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
         </div>
       </li>
     {% endfor %}
