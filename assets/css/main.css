@@ -10,6 +10,14 @@ h3 {
   font-size: 2rem;
 }
 
+a {
+  color: #2F7F47;
+}
+
+a:hover {
+  color: #223753;
+}
+
 .button {
   text-transform: none;
 }
