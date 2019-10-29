@@ -31,4 +31,4 @@ videos:
     video_id: "HhceJ5xxl-4"
 ---
 
-This is a site a site based around The Coding Train's \#TeamTrees live stream. <a href="https://www.youtube.com/watch?v=HhceJ5xxl-4">Here is a link</a> to the original live stream. Below you will find the original code from that stream as well as community created remixes. For more information on \#TeamTrees you can go to <a href="https://teamtrees.org/">teamtrees.org</a>. Learn how to contribute your code on the <a href="https://github.com/CodingTrain/teamtrees">github repository for this project</a>!
+This is a site a site based around The Coding Train's \#TeamTrees live stream. <a href="https://www.youtube.com/watch?v=HhceJ5xxl-4">Here is a link</a> to the original live stream. You can also view all coding tree videos associated with the fundraiser below. Below you will find the original code from that stream as well as community created remixes. For more information on \#TeamTrees you can go to <a href="https://teamtrees.org/">teamtrees.org</a>. Learn how to contribute your code on the <a href="https://github.com/CodingTrain/teamtrees">github repository for this project</a>!
