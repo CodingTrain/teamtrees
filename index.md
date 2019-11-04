@@ -27,6 +27,9 @@ videos:
   - name: "Phyllotaxis - CC30"
     website: "https://thecodingtrain.com/CodingChallenges/030-phyllotaxis.html"
     video_id: "KWoJgHFYWxY"
+  - name: "Barnsley Fern - CC108"
+    website: "https://thecodingtrain.com/CodingChallenges/108-barnsley-fern.html"
+    video_id: "JFugGF1URNo"
   - name: "Fractal #TeamTrees Live Stream"
     video_id: "HhceJ5xxl-4"
 ---
