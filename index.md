@@ -8,7 +8,7 @@ sketches:
     creator: "The Coding Train"
     url: "Original"
   - name: "Minimalistic yet Realistic"
-    description: "Hey there. When you read this I havent updated this description yet :)"
+    description: "The tree isn't completely collapsing. YAY!"
     creator: "Okaghana"
     url: "Okaghana"
 ---
