@@ -7,10 +7,9 @@ sketches:
     description: "Code from the live stream!"
     creator: "The Coding Train"
     url: "Original"
-	
   - name: "Minimalistic yet Realistic"
     description: "Hey there. When you read this I havent updated this description yet :)"
-    creator: "Okaghana
+    creator: "Okaghana"
     url: "Okaghana"
 ---
 
