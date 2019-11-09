@@ -71,6 +71,7 @@ class Wind {
 class wigglyLine{
 	constructor(strength){
 		this.strength = strength
+		this.alpha = 255
 		
 		let x = strength>0 ? random(-500, -50) : random(width+500, width+50)
 		this.pos = createVector(x, random(100, height-100))
@@ -81,12 +82,13 @@ class wigglyLine{
 		let y = this.pos.y
 		
 		noFill()
-		stroke(255)
-		strokeWeight(1)
-		bezier(x-150, y, x-50, y-100, x+50, y+100, x+150, y)
+		stroke(255, this.alpha)
+		strokeWeight(3)
+		bezier(x-150, y, x-40, y-100, x+40, y+100, x+150, y)
 	}
 	
 	update(){
 		this.pos.x += this.strength * 10
+		this.alpha -= 6
 	}
 }

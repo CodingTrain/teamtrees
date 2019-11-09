@@ -5,7 +5,7 @@ let leaves = [];
 
 let physics;										// holds Physics Engine
 let gb;												// holds the Gravity Behaviour
-let wind;											// hold Wind
+let wind;											// holds Wind
 
 function setup(){
 	createCanvas(windowWidth, windowHeight);
