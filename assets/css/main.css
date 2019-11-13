@@ -10,6 +10,14 @@ h3 {
   font-size: 2rem;
 }
 
+a {
+  color: #2F7F47;
+}
+
+a:hover {
+  color: #223753;
+}
+
 .button {
   text-transform: none;
 }
@@ -38,4 +46,23 @@ h3 {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.sr-only {
+  display: none;
+}
+
+.vid-height {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1rem;
+}
+
+.vid-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
