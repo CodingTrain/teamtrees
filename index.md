@@ -7,6 +7,10 @@ sketches:
     description: "Code from the live stream!"
     creator: "The Coding Train"
     url: "original"
+  - name: "Minimalistic yet Realistic"
+    description: "The tree isn't completely collapsing. YAY!"
+    creator: "Okaghana"
+    url: "Okaghana"
 
 videos:
   - name: "Fractal Trees - Recursive - CC14"
